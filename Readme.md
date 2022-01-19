@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Неопознанный енот](https://up.htmlacademy.ru/htmlcss/33/user/1700741).
-* Наставник: `Неизвестно`.
+* Студент: [Алена Чеснокова](https://up.htmlacademy.ru/htmlcss/33/user/1700741).
+* Наставник: [Анастасия Полозова](https://htmlacademy.ru/profile/id258631).
 
 ---
 
