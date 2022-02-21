@@ -1,0 +1,451 @@
+font-face {
+    font-family: "Raleway Extrabold";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/raleway-800.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/rubik-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/rubik-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Rubik Extrabold";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/rubik-800.woff2") format("woff2");
+    font-display: swap;
+}
+
+
+body {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    color: #444444;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* header */
+
+.page-header,
+.page-header a {
+    background-color: #FFE17F;
+    color: #000000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.search-form input {
+    background: #FFE17F;
+    background-image: url("images/search.svg");
+    /* почему-то не срабатывает вставка значка поиска*/
+    border: 2px solid #000000;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-form label {
+    border: 2px solid #000000;
+    border-radius: 0 50px 50px 0;
+    border-left: none;
+}
+
+.navigation-main {
+    font-family: "Raleway Extrabold", sans-serif;
+    text-transform: uppercase;
+}
+
+button.catalog {
+    display: block;
+    border-radius: 50%;
+    background-color: #FFE17F;
+    opacity: 0.3;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+}
+
+.catalog-navigation {
+    display: none;
+}
+
+.product-navigation-link {
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: normal;
+    text-transform: none;
+}
+
+
+/* slider */
+
+.product-slider-number {
+    font-size: 180px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.product-slider-advantage {
+    font-family: "Raleway Extrabold", sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.product-slider-link {
+    font-family: "Raleway Extrabold", sans-serif;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.product-slider-value {
+    font-size: 36px;
+    color: #000000;
+}
+
+.product-slider-characteristic {
+    font-size: 16px;
+}
+
+.product-slider-inner {
+    display: none;
+}
+
+.checked-slider {
+    display: block;
+}
+
+
+/* submenu */
+
+.catalog-list-link {
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 24px;
+    color: #000000;
+    letter-spacing: -0.02em;
+}
+
+.product-navigation-img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    background-color: #FFE17F;
+}
+
+
+/* purshase-terms */
+
+.purshase-terms-form {
+    border-right: 3px solid #000000;
+    text-transform: uppercase;
+}
+
+.purshase-terms-form label {
+    display: block;
+    background-color: #FFE17F;
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 21px;
+    text-align: center;
+    vertical-align: top;
+    letter-spacing: 20%;
+    color: #000000;
+}
+
+.purshase-terms-form input:checked+label {
+    display: block;
+    background-color: #000000;
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 21px;
+    text-align: center;
+    vertical-align: top;
+    letter-spacing: 20%;
+    color: #FFE17F;
+}
+
+.purshase-terms-title {
+    font-family: "Raleway Extrabold", sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.purshase-terms-content {
+    display: none;
+}
+
+.checked-term {
+    display: block;
+    background-color: #F0F0F0;
+}
+
+
+/*delivery-order*/
+
+.delivery-order {
+    font-family: "Raleway Extrabold";
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.delivery-order {
+    font-family: "Raleway Extrabold";
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background-color: #F0F0F0;
+}
+
+.delivery-order-img {
+    background-color: #FFE17F;
+}
+
+
+/*about*/
+
+.line {
+    width: 84px;
+    height: 7px;
+}
+
+.black {
+    background-color: #000000;
+}
+
+.yellow {
+    background-color: #ffc500;
+}
+
+.about-title,
+.contacts-title,
+.subscribe-title {
+    font-family: "Raleway Extrabold";
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.transport {
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    list-style-image: url('images/Ellipse.svg');
+    /* не понимаю, почему не получилось изменить маркеры*/
+}
+
+.like-button {
+    font-family: "Raleway Extrabold";
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    background-color: #FFE17F;
+    /* не знаю, как сестить фон*/
+}
+
+.subscribe {
+    background-color: #F0F0F0;
+}
+
+.subscribe-button {
+    font-family: "Raleway Extrabold";
+    line-height: 21px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.contacts-subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #444444;
+}
+
+.footer-logo {
+    color: #ffc500;
+}
+
+.footer-address-content {
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.footer-navigation-link {
+    font-family: "Raleway Extrabold";
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-social-link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-tel {
+    font-size: 16px;
+    line-height: 20px;
+    color: #F0F0F0;
+}
+
+
+/* catalog.html */
+
+.main-catalog,
+.main-catalog a {
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    background-color: #F0F0F0;
+    text-decoration: none;
+}
+
+.catalog-title {
+    font-family: "Raleway Extrabold";
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.breadcrumbs-link {
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+
+/*filtr block*/
+
+.catalog-filter-title {
+    font-family: "Raleway Extrabold";
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000;
+}
+
+.catalog-filter-group-title {
+    font-family: "Rubik Bold";
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.catalog-filter-group {
+    border: none;
+    border-bottom: 2px solid #000000;
+}
+
+.catalog-filter-group:last-of-type {
+    border: none;
+}
+
+
+/* почему не сработал .catalog-filter-group:last-of-type*/
+
+
+/*sorting*/
+
+.sorting-title {
+    font-family: "Raleway Extrabold";
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.sorting-form {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.product-block {
+    background-color: #FFFFFF;
+}
+
+.product-card-title {
+    font-family: "Rubik Bold";
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.product-card-price {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #444444;
+}
+
+.loading {
+    font-family: "Relaway Extrabold";
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.pagination-list {
+    display: block;
+    background-color: #F0F0F0;
+}
+
+.pagination-link {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #444444;
+    opacity: 0.3;
+}
+
+.pagination-back,
+.pagination-next {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+
+/*почему не изенился цвет*/
