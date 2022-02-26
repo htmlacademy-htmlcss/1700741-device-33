@@ -1,4 +1,79 @@
-font-face {
+/*like normalize and reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+main {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    max-width: 100%;
+    white-space: normal;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+
+/*fonts*/
+
+@font-face {
     font-family: "Raleway Extrabold";
     font-style: normal;
     font-weight: 800;
@@ -22,7 +97,6 @@ font-face {
     font-display: swap;
 }
 
-
 @font-face {
     font-family: "Rubik Extrabold";
     font-style: normal;
@@ -30,7 +104,6 @@ font-face {
     src: url("/fonts/rubik-800.woff2") format("woff2");
     font-display: swap;
 }
-
 
 body {
     font-family: "Rubik", "Arial", sans-serif;
@@ -168,7 +241,6 @@ button.catalog {
     font-family: "Raleway Extrabold", sans-serif;
     line-height: 21px;
     text-align: center;
-    vertical-align: top;
     letter-spacing: 20%;
     color: #000000;
 }
@@ -179,7 +251,6 @@ button.catalog {
     font-family: "Raleway Extrabold", sans-serif;
     line-height: 21px;
     text-align: center;
-    vertical-align: top;
     letter-spacing: 20%;
     color: #FFE17F;
 }
