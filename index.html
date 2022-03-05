@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <!--Проверка-->
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Огромный выбор гаджетов">
@@ -277,76 +278,83 @@
                 <div class="line black"></div>
                 <h3 class="contacts-title">Контакты</h3>
                 <p class="contacts-desc">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
-                <b class="contacts-subtitle">Интернет-магазин «Девайс»</b>
-                <p class="contacts-desc">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-                <p><a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a></p>
-                <b class="contacts-subtitle">Время работы</b>
+                <h4 class="contacts-subtitle">Интернет-магазин «Девайс»</h4>
+                <p class="contacts-desc">Санкт-Петербург, набережная реки Карповки, 5, литера П.<br>
+                    <a class="contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a></p>
+                <h4 class="contacts-subtitle">Время работы</h4>
                 <p class="contacts-desc">пн—пт: с 10:00 до 22:00<br> сб—вс: с 10:00 до 19:00</p>
                 <a class="like-button contacts-link" href="#">Напишите нам</a>
             </section>
         </article>
         <!--subscribe-->
         <section class="subscribe">
-            <h3 class="subscribe-title">Подпишитесь<br> на рассылку </h3>
-            <p class="subscribe-desc">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
-            </p>
-            <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-                <label for="subscribe"></label>
-                <input type="text" id="subscribe" name="subscribe" placeholder="Ваш e-mail">
-                <button class="subscribe-button" type="submit">Подписаться</button>
-            </form>
-            <img class="ikon-free" src="images/tick-big.svg" width="16" height="16" alt="чекбокс бесплатно">
-            <p class="free">Это бесплатно</p>
+            <div class="wrapper-subsribe">
+                <h3 class="subscribe-title">Подпишитесь<br> на рассылку </h3>
+                <p class="subscribe-desc">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.
+                </p>
+            </div>
+            <div class="wrapper-subscribe-form">
+                <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <label for="subscribe" class="subscribe-label"></label>
+                    <input class="subscribe-input" type="text" id="subscribe" name="subscribe" placeholder="Ваш e-mail">
+                    <button class="subscribe-button" type="submit">Подписаться</button>
+                </form>
+                <img class="ikon-free" src="images/tick-big.svg" width="16" height="16" alt="чекбокс бесплатно">
+                <p class="free">Это бесплатно</p>
+            </div>
         </section>
-
     </main>
     <footer>
-        <section class="footer-address">
-            <h2 class="visually-hidden">Адрес</h2>
-            <img class="footer-logo" src="images/logo-yellow.svg" width="144" height="36" alt="Логотип интернет-магазина Device">
-            <p class="footer-address-content">Санкт-Петербург, набережная<br> реки Карповки, 5, литера П.</p>
-            <div class="line yellow"></div>
-        </section>
-        <section class="footer-navigation">
-            <h2 class="visually-hidden">Меню</h2>
-            <ol class="footer-navigation-list">
-                <li class="footer-navigation-item">
-                    <a class="footer-navigation-link" href="#delivery-block">Доставка</a>
-                </li>
-                <li class="footer-navigation-item">
-                    <a class="footer-navigation-link" href="#guarantee-block">Гарантия</a>
-                </li>
-                <li class="footer-navigation-item">
-                    <a class="footer-navigation-link" href="#contacts-block">Контакты</a>
-                </li>
-            </ol>
-        </section>
-        <section class="footer-social">
-            <h2 class="visually-hidden">Наши социальные сети</h2>
-            <ul class="footer-social-list">
-                <li class="footer-social-item">
-                    <a class="footer-social-link facebook" href="https://www.facebook.com/htmlacademy">
-                        <img class="social-img" src="images/facebook.svg" width="9" height="18">
-                        <span class="visually-hidden">Facebook</span></a>
-                </li>
-                <li class="footer-social-item">
-                    <a class="footer-social-link instagram" href="https://www.instagram.com/htmlacademy/">
-                        <img class="social-img" src="images/instagram.svg" width="9" height="18">
-                        <span class="visually-hidden">Instagram</span></a>
-                </li>
-                <li class="footer-social-item">
-                    <a class="footer-social-link twitter" href="https://www.twitter.com/htmlacademy_ru">
-                        <img class="social-img" src="images/twitter.svg" width="9" height="18">
-                        <span class="visually-hidden"></span>Twitter</a>
-                </li>
-            </ul>
-        </section>
-        <section class="tel-site">
-            <h2 class="visually-hidden">Телефон и сайт разработчика</h2>
-            <a class="footer-tel" href="tel:+78128121212">Тел.:+7 (812) 812-12-12</a>
-            <address><a href="http://www.htmlacademy.ru"><img class="footer-address" src="images/htmlacademy.svg"></a>
+        <div class="wrapper-footer">
+            <section class="footer-address">
+                <h2 class="visually-hidden">Адрес</h2>
+                <img class="footer-logo" src="images/logo-yellow.svg" width="144" height="36" alt="Логотип интернет-магазина Device">
+                <p class="footer-address-content">Санкт-Петербург, набережная<br> реки Карповки, 5, литера П.</p>
+                <div class="line yellow"></div>
+            </section>
+            <div class="wrapper-footer-menu">
+                <section class="footer-navigation">
+                    <h2 class="visually-hidden">Меню</h2>
+                    <ol class="footer-navigation-list">
+                        <li class="footer-navigation-item">
+                            <a class="footer-navigation-link" href="#delivery-block">Доставка</a>
+                        </li>
+                        <li class="footer-navigation-item">
+                            <a class="footer-navigation-link" href="#guarantee-block">Гарантия</a>
+                        </li>
+                        <li class="footer-navigation-item">
+                            <a class="footer-navigation-link" href="#contacts-block">Контакты</a>
+                        </li>
+                    </ol>
+                </section>
+                <section class="footer-social">
+                    <h2 class="visually-hidden">Наши социальные сети</h2>
+                    <ul class="footer-social-list">
+                        <li class="footer-social-item">
+                            <a class="footer-social-link facebook" href="https://www.facebook.com/htmlacademy">
+                                <img class="social-img" src="images/facebook.svg" width="40" height="40">
+                                <span class="visually-hidden">Facebook</span></a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a class="footer-social-link instagram" href="https://www.instagram.com/htmlacademy/">
+                                <img class="social-img" src="images/instagram.svg" width="40" height="40">
+                                <span class="visually-hidden">Instagram</span></a>
+                        </li>
+                        <li class="footer-social-item">
+                            <a class="footer-social-link twitter" href="https://www.twitter.com/htmlacademy_ru">
+                                <img class="social-img" src="images/twitter.svg" width="40" height="40">
+                                <span class="visually-hidden">Twitter</span></a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <section class="tel-site">
+                <h2 class="visually-hidden">Телефон и сайт разработчика</h2>
+                <a class="footer-tel" href="tel:+78128121212">Тел.:+7 (812) 812-12-12</a>
+                <address><a  class="footer-link-htmlacademy" href="http://www.htmlacademy.ru"><img class="footer-address-img" src="images/htmlacademy.svg"></a>
             </address>
-        </section>
+            </section>
+        </div>
     </footer>
 </body>
 
