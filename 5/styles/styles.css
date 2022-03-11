@@ -1,0 +1,1050 @@
+/*like normalize and reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+main {
+    display: block;
+}
+
+a {
+    background-color: transparent;
+}
+
+img {
+    border-style: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    max-width: 100%;
+    white-space: normal;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*fonts*/
+
+@font-face {
+    font-family: "Raleway Extrabold";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/raleway-800.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/rubik-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik Bold";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/rubik-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik Extrabold";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/fonts/rubik-800.woff2") format("woff2");
+    font-display: swap;
+}
+
+
+/*big structure*/
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "Rubik", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    color: #444444;
+    background-color: #FFFFFF;
+}
+
+.main-container,
+.main-catalog {
+    flex-grow: 1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* header */
+
+.header-wrapper,
+.header-catalog-wrapper {
+    width: 1160px;
+    margin: 40px auto 0;
+    padding: 0 60px 152px;
+    background-color: #FFE17F;
+}
+
+.header-catalog-wrapper {
+    padding-bottom: 38px;
+    margin-bottom: 35px;
+}
+
+.page-header-logo {
+    margin-top: -23px;
+    margin-bottom: 30px;
+}
+
+.page-header,
+.page-header a {
+    color: #000000;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.search-form {
+    display: block;
+    width: 517px;
+    margin-right: 26px;
+}
+
+.search-form input {
+    background: #FFE17F;
+    background-image: url("images/search.svg");
+    /* почему-то не срабатывает вставка значка поиска*/
+    border: 2px solid #000000;
+    border-radius: 50px 0 0 50px;
+}
+
+.search-form label {
+    font-size: 18px;
+    line-height: 30px;
+    border: 2px solid #000000;
+    border-radius: 0 50px 50px 0;
+    border-left: none;
+}
+
+.header-first-line {
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.navigation-user {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation-item-entrance {
+    width: 231px;
+    margin-right: 26px;
+}
+
+.navigation-item-compare {
+    width: 105px;
+    margin-right: 36px;
+}
+
+.navigation-item-box {
+    width: 99px;
+}
+
+.catalog-navigation {
+    display: none;
+}
+
+.product-navigation-link {
+    font-size: 16px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: normal;
+    text-transform: none;
+}
+
+
+/*ПОЧЕМУ-ТО ТЕКСТ НЕ ЖИРНЫЙ*/
+
+.navigation-main {
+    display: flex;
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+.navigation-item {
+    margin-right: 45px;
+}
+
+.navigation-item:last-child {
+    margin-right: 0;
+}
+
+.navigation-item-catalog {
+    margin-right: auto;
+}
+
+button.catalog {
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #FFE17F;
+    opacity: 0.3;
+    border: 2px solid #ad9393;
+    box-sizing: border-box;
+}
+
+
+/* slider */
+
+.product-slider {
+    width: 1160px;
+    margin-top: -136px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 2px solid blue;
+}
+
+.slider-button,
+.slider-pagination-button {
+    display: none;
+}
+
+.slider-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    outline: 1px solid black;
+}
+
+
+/*в интернет экспорере сжимает ширину рисунка*/
+
+.product-slider-img {
+    width: 560px;
+    margin-right: 40px;
+    margin-top: -30px;
+    outline: 2px solid red;
+}
+
+.wrapper-slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-slider-number {
+    align-self: flex-end;
+    width: 250px;
+    height: 135px;
+    margin-top: 60px;
+    margin-left: 49px;
+    margin-bottom: -85px;
+    font-size: 180px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.product-slider-advantage {
+    margin-bottom: 29px;
+    font-family: "Raleway Extrabold", sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.product-slider-desc {
+    margin-bottom: 51px;
+}
+
+.product-slider-link {
+    width: 220px;
+    margin-bottom: 49px;
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #FFE17F;
+}
+
+.product-slider-specifications {
+    display: flex;
+    width: 307px;
+}
+
+.wrapper-value {
+    width: 140px;
+    margin-left: 7px;
+}
+
+.wrapper-value:last-child {
+    margin-left: 0;
+}
+
+.product-slider-value {
+    margin-bottom: 12px;
+    font-size: 36px;
+    color: #000000;
+}
+
+.product-slider-characteristic {
+    width: 140px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.product-slider-inner {
+    display: none;
+}
+
+.checked-slider {
+    display: block;
+}
+
+
+/* submenu */
+
+.catalog-list {
+    display: flex;
+    width: 1160px;
+    margin: auto;
+    margin-bottom: 172px;
+    justify-content: space-between;
+}
+
+.catalog-list-item {
+    width: 160px;
+}
+
+.catalog-list-link {
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 24px;
+    color: #000000;
+    letter-spacing: -0.02em;
+}
+
+.product-navigation-block {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 32px;
+    background-color: #FFE17F;
+}
+
+
+/* purshase-terms */
+
+.purshase-terms {
+    min-width: 100%;
+    margin-bottom: 70px;
+    background-color: #F0F0F0;
+    padding-top: 0.1px;
+}
+
+
+/*НЕ РАБОТАЕТ СДВИГ ВВЕРХ*/
+
+.wrapper-purshase-terms {
+    display: flex;
+    width: 1160px;
+    margin: auto;
+    margin-top: -102px;
+    padding-top: 0.1px;
+    padding-bottom: 72px;
+}
+
+input.button[type="radio"] {
+    display: none;
+}
+
+.purshase-terms-form {
+    width: 287px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    border-right: 3px solid #000000;
+    text-transform: uppercase;
+}
+
+
+/* НЕ СРАБАТЫВАЕТ вертикальное выравнивание*/
+
+.purshase-terms-form label {
+    display: block;
+    height: 40px;
+    margin-bottom: 35px;
+    padding-top: 10px;
+    /*vertical-align: middle;
+    padding: auto;*/
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 20%;
+    color: #000000;
+    background-color: #FFE17F;
+}
+
+.purshase-terms-form input:checked+label {
+    display: block;
+    background-color: #000000;
+    font-family: "Raleway Extrabold", sans-serif;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 20%;
+    color: #FFE17F;
+}
+
+.wrapper-term {
+    width: 452px;
+    margin-right: 106px;
+}
+
+.purshase-terms-title {
+    margin-bottom: 34px;
+    font-family: "Raleway Extrabold", sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.purshase-terms-img {
+    width: 136px;
+    height: 164px;
+}
+
+.purshase-terms-content {
+    display: none;
+}
+
+.checked-term {
+    display: flex;
+    margin-top: 72px;
+    margin-left: 116px;
+    /* background-color: #F0F0F0;*/
+}
+
+
+/*delivery-order*/
+
+.delivery-order {
+    display: flex;
+    width: 1160px;
+    margin: auto;
+    margin-bottom: 70px;
+    font-family: "Raleway Extrabold";
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background-color: #F0F0F0;
+}
+
+.delivery-order-img {
+    width: 125px;
+    height: 100px;
+    background-color: #FFE17F;
+}
+
+.delivery-content {
+    margin: auto;
+}
+
+
+/*about*/
+
+.main-article {
+    display: flex;
+    width: 1160px;
+    margin: auto;
+    margin-bottom: 70px;
+}
+
+.about {
+    width: 520px;
+    margin-right: 108px;
+}
+
+.contacts {
+    width: 532px;
+}
+
+.line {
+    width: 84px;
+    height: 7px;
+}
+
+.black {
+    background-color: #000000;
+    margin-bottom: 47px;
+}
+
+.yellow {
+    background-color: #ffc500;
+}
+
+.about-title,
+.contacts-title,
+.subscribe-title {
+    margin-bottom: 48px;
+    font-family: "Raleway Extrabold";
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.transport {
+    margin-bottom: 19px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    list-style-image: url('images/Ellipse.svg');
+    /* не понимаю, почему не получилось изменить маркеры*/
+}
+
+.contacts-subtitle {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.transport-item,
+.contacts-subtitle {
+    margin-bottom: 19px;
+}
+
+.about-desc,
+.contacts-desc,
+.transport-item:last-child {
+    margin-bottom: 30px;
+}
+
+.like-button {
+    font-family: "Raleway Extrabold";
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    background-color: #FFE17F;
+    /* не знаю, как сестить фон*/
+}
+
+.about-link {
+    width: 270px;
+}
+
+.contacts-link {
+    width: 252px;
+}
+
+
+/*subscribe*/
+
+.subscribe {
+    width: 100%;
+    margin: auto;
+    background-color: #F0F0F0;
+}
+
+.wrapper-subsribe,
+.wrapper-subscribe-form {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+}
+
+.subscribe-button {
+    font-family: "Raleway Extrabold";
+    line-height: 21px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.subscribe-title {
+    margin-top: 64px;
+    margin-bottom: 144px;
+    margin-right: 252px;
+    margin-right: 147px;
+}
+
+.subscribe-desc {
+    width: 560px;
+    margin-top: 74px;
+}
+
+.subscribe-form {
+    width: 810px;
+    height: 57px;
+    margin-right: auto;
+    margin-bottom: 56px;
+}
+
+.subscribe-button {
+    width: 253px;
+    height: 57px;
+    margin-left: -5px;
+    border: 3px solid #CECECE;
+}
+
+.subscribe-input {
+    width: 557px;
+    height: 53px;
+    background-color: #F0F0F0;
+    border-bottom: 3px solid #CECECE;
+}
+
+.ikon-free {
+    width: 16px;
+    margin-right: 16px;
+}
+
+.free {
+    width: 128px;
+    margin-right: 16px;
+}
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    background-color: #444444;
+}
+
+.wrapper-footer {
+    display: flex;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.footer-address {
+    width: 239px;
+    margin-right: 112px;
+    margin-top: 62px;
+    margin-bottom: 77px;
+}
+
+.footer-logo {
+    color: #ffc500;
+    margin-bottom: 35px;
+}
+
+.footer-address-content {
+    margin-bottom: 64px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.wrapper-footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 444px;
+    margin-top: 137px;
+    margin-right: auto;
+}
+
+.footer-navigation-list {
+    display: flex;
+    margin-bottom: 62px;
+}
+
+.footer-navigation-item {
+    margin-right: 35px;
+}
+
+.footer-navigation-item:last-child {
+    margin-right: 0;
+}
+
+.footer-navigation-link {
+    font-family: "Raleway Extrabold";
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-social-list {
+    display: flex;
+}
+
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-right: 15px;
+}
+
+.footer-social-link {
+    display: block;
+    padding: auto;
+}
+
+.footer-social-link:last-child {
+    margin-right: 0;
+}
+
+.tel-site {
+    width: 175px;
+    margin-top: 140px;
+}
+
+.footer-tel {
+    display: block;
+    margin-bottom: 63px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #F0F0F0;
+}
+
+.footer-link-htmlacademy {
+    display: block;
+    margin-left: 59px;
+}
+
+.footer-address-img {
+    width: 115px;
+    margin-left: auto;
+}
+
+
+/* catalog.html */
+
+
+/*big structure atalog*/
+
+.main-catalog {
+    width: 100%;
+}
+
+.header-inner {
+    width: 1160px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+.main-catalog,
+.main-catalog a {
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.catalog-title {
+    margin-bottom: 16px;
+    font-family: "Raleway Extrabold";
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.breadcrumbs-list {
+    display: flex;
+}
+
+.breadcrumbs-item {
+    margin-right: 36px;
+    margin-bottom: 35px;
+}
+
+.breadcrumbs-link {
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.breadcrumbs-link:last-child {
+    margin-right: 0;
+}
+
+.wrapper-catalog {
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+.wrapper-catalog-main {
+    display: flex;
+    width: 1160px;
+    margin: 0 auto;
+}
+
+
+/*filtr block*/
+
+.catalog-filter {
+    width: 320px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.catalog-filter-group {
+    border: none;
+    border-bottom: 2px solid #000000;
+}
+
+.catalog-filter-group:last-of-type {
+    border: none;
+}
+
+.catalog-filter-title {
+    margin-top: 25px;
+    padding-bottom: 60px;
+    font-family: "Raleway Extrabold";
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000000;
+}
+
+.catalog-filter-group-title {
+    padding-top: 12px;
+    margin-bottom: 20px;
+    font-family: "Rubik Bold";
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.catalog-filter-price,
+.filter-bluetooth,
+.catalog-filter-list {
+    margin-bottom: 35px;
+}
+
+.catalog-filter-item {
+    margin-bottom: 17px;
+}
+
+.catalog-filter-item:last-child {
+    margin-bottom: 0;
+}
+
+.filter-bluetooth-item {
+    margin-bottom: 20px;
+}
+
+.filter-bluetooth-item:last-child {
+    margin-bottom: 0;
+}
+
+.button-view {
+    width: 100%;
+}
+
+
+/*sorting*/
+
+.sorting {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    height: 70px;
+}
+
+.sorting-title {
+    margin-left: 40px;
+    margin-top: 25.5px;
+    margin-bottom: 25.5px;
+    margin-right: 197px;
+    font-family: "Raleway Extrabold";
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.sorting-form {
+    width: 159px;
+    margin-right: auto;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.down-arrow {
+    margin-right: 40px;
+}
+
+
+/*main part catalog*/
+
+.wrapper-product-block {
+    display: flex;
+    width: 840px;
+    flex-direction: column;
+}
+
+.product-block {
+    background-color: #FFFFFF;
+}
+
+.product-block-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    padding-left: 40px;
+}
+
+.product-block-item {
+    width: 360px;
+    margin-right: 40px;
+    margin-bottom: 44px;
+}
+
+.product-card-img {
+    margin-bottom: 32px;
+}
+
+.wrapper-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-card-title {
+    font-family: "Rubik Bold";
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.product-card-price {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #444444;
+}
+
+.loading {
+    width: 760px;
+    height: 55px;
+    margin: 0 auto 44px;
+    outline: 1px solid red;
+    font-family: "Relaway Extrabold";
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: 3px solid #E5E5E5;
+    background-color: #FFFFFF;
+}
+
+.wrapper-pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 760px;
+    height: 71px;
+    padding: 25px;
+    margin: 0 auto;
+    margin-bottom: 78px;
+    background-color: #F0F0F0;
+}
+
+.pagination-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination-item {
+    width: 40px;
+    height: 40px;
+}
+
+.pagination-link {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #444444;
+    opacity: 0.3;
+}
+
+.pagination-back,
+.pagination-next {
+    font-family: "Raleway Extrabold", sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+
+/*почему не изенился цвет*/
