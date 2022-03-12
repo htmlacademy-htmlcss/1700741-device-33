@@ -1,3 +1,6 @@
+/*version 07/03/2022*/
+
+
 /*like normalize and reset*/
 
 * {
@@ -1046,5 +1049,6 @@ footer {
     color: #000000;
 }
 
+color: #000000;
 
-/*почему не изенился цвет*/
+}
