@@ -1,4 +1,4 @@
-/*version 07/03/2022*/
+/*version 14/03/2022*/
 
 
 /*like normalize and reset*/
@@ -209,12 +209,32 @@ body {
 
 .navigation-user {
     display: flex;
-    flex-wrap: wrap;
+    /*!!!!!!!!!!!!!!!!!!!!*/
+    padding-inline-start: 0;
 }
 
 .navigation-item-entrance {
-    width: 231px;
-    margin-right: 26px;
+    min-width: 231px;
+    flex-grow: 1;
+    margin-right: auto;
+    /*НЕ ПОНИМАЮ, ПОЧЕМУ НЕ СРАБАТЫВАЕТ*/
+}
+
+
+/*
+.page-header-entrance,
+.page-header-compare,
+.page-header-box {
+    display: block;
+    box-sizing: content-box;
+    padding: 5px;
+}*/
+
+.page-header-entrance img,
+.page-header-compare img,
+.page-header-box img {
+    margin-right: 12px;
+    vertical-align: baseline;
 }
 
 .navigation-item-compare {
@@ -241,8 +261,23 @@ body {
 
 /*ПОЧЕМУ-ТО ТЕКСТ НЕ ЖИРНЫЙ*/
 
+.navigation-link-title {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.navigation-link-title,
+.navigation-link {
+    font-family: 'Raleway Extrabold';
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
 .navigation-main {
     display: flex;
+    align-items: center;
     font-family: "Raleway Extrabold", sans-serif;
     line-height: 21px;
     text-transform: uppercase;
@@ -262,6 +297,9 @@ body {
 
 button.catalog {
     display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
     border-radius: 50%;
     background-color: #FFE17F;
     opacity: 0.3;
@@ -398,6 +436,7 @@ button.catalog {
     line-height: 24px;
     color: #000000;
     letter-spacing: -0.02em;
+    text-decoration: none;
 }
 
 .product-navigation-block {
@@ -573,8 +612,9 @@ input.button[type="radio"] {
     font-weight: bold;
     line-height: 20px;
     letter-spacing: -0.02em;
-    list-style-image: url('images/Ellipse.svg');
-    /* не понимаю, почему не получилось изменить маркеры*/
+    /*list-style-type: none;
+    list-style-image: url('../images/Ellipse.svg');
+    list-style-position: inside;*/
 }
 
 .contacts-subtitle {
@@ -588,6 +628,13 @@ input.button[type="radio"] {
     margin-bottom: 19px;
 }
 
+.transport-item {
+    position: relative;
+    padding-left: 34px;
+    background: url('../images/Ellipse.svg') left center no-repeat;
+    background-size: 8px 8px;
+}
+
 .about-desc,
 .contacts-desc,
 .transport-item:last-child {
@@ -595,6 +642,8 @@ input.button[type="radio"] {
 }
 
 .like-button {
+    display: block;
+    padding: 10px 6px;
     font-family: "Raleway Extrabold";
     line-height: 21px;
     text-align: center;
@@ -602,7 +651,6 @@ input.button[type="radio"] {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-decoration: none;
-    display: block;
     background-color: #FFE17F;
     /* не знаю, как сестить фон*/
 }
@@ -1047,8 +1095,4 @@ footer {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #000000;
-}
-
-color: #000000;
-
 }
