@@ -1,4 +1,4 @@
-/*version 14/03/2022*/
+/*version 14/03/2022_2*/
 
 
 /*like normalize and reset*/
@@ -181,20 +181,35 @@ body {
 }
 
 .search-form {
-    display: block;
+    display: flex;
     width: 517px;
+    height: 40px;
     margin-right: 26px;
 }
 
 .search-form input {
+    flex-grow: 1;
     background: #FFE17F;
-    background-image: url("images/search.svg");
-    /* почему-то не срабатывает вставка значка поиска*/
+    background: url("../images/search.svg") no-repeat 16px 12px;
+    background-size: 16px 16px;
     border: 2px solid #000000;
     border-radius: 50px 0 0 50px;
 }
 
+.search-form input::before {
+    content: "Текст поиска";
+    margin: 46px 10px;
+    font-family: "Rubik", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    outline: 1px solid red;
+}
+
 .search-form label {
+    width: 160px;
+    padding: 2px 56px;
     font-size: 18px;
     line-height: 30px;
     border: 2px solid #000000;
@@ -204,31 +219,19 @@ body {
 
 .header-first-line {
     display: flex;
+    align-items: baseline;
     margin-bottom: 45px;
 }
 
 .navigation-user {
     display: flex;
-    /*!!!!!!!!!!!!!!!!!!!!*/
-    padding-inline-start: 0;
+    width: 497px;
 }
 
 .navigation-item-entrance {
     min-width: 231px;
-    flex-grow: 1;
     margin-right: auto;
-    /*НЕ ПОНИМАЮ, ПОЧЕМУ НЕ СРАБАТЫВАЕТ*/
 }
-
-
-/*
-.page-header-entrance,
-.page-header-compare,
-.page-header-box {
-    display: block;
-    box-sizing: content-box;
-    padding: 5px;
-}*/
 
 .page-header-entrance img,
 .page-header-compare img,
@@ -238,12 +241,7 @@ body {
 }
 
 .navigation-item-compare {
-    width: 105px;
     margin-right: 36px;
-}
-
-.navigation-item-box {
-    width: 99px;
 }
 
 .catalog-navigation {
@@ -268,7 +266,7 @@ body {
 
 .navigation-link-title,
 .navigation-link {
-    font-family: 'Raleway Extrabold';
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.2em;
@@ -278,7 +276,7 @@ body {
 .navigation-main {
     display: flex;
     align-items: center;
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-transform: uppercase;
 }
@@ -359,7 +357,7 @@ button.catalog {
 
 .product-slider-advantage {
     margin-bottom: 29px;
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     font-size: 50px;
     line-height: 50px;
     color: #000000;
@@ -372,7 +370,7 @@ button.catalog {
 .product-slider-link {
     width: 220px;
     margin-bottom: 49px;
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
     letter-spacing: 0.2em;
@@ -432,7 +430,7 @@ button.catalog {
 }
 
 .catalog-list-link {
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 24px;
     color: #000000;
     letter-spacing: -0.02em;
@@ -490,7 +488,7 @@ input.button[type="radio"] {
     padding-top: 10px;
     /*vertical-align: middle;
     padding: auto;*/
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
     letter-spacing: 20%;
@@ -501,7 +499,7 @@ input.button[type="radio"] {
 .purshase-terms-form input:checked+label {
     display: block;
     background-color: #000000;
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
     letter-spacing: 20%;
@@ -515,7 +513,7 @@ input.button[type="radio"] {
 
 .purshase-terms-title {
     margin-bottom: 34px;
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     font-size: 50px;
     line-height: 50px;
     color: #000000;
@@ -545,7 +543,7 @@ input.button[type="radio"] {
     width: 1160px;
     margin: auto;
     margin-bottom: 70px;
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     font-size: 20px;
     line-height: 23px;
     text-align: center;
@@ -601,7 +599,7 @@ input.button[type="radio"] {
 .contacts-title,
 .subscribe-title {
     margin-bottom: 48px;
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     font-size: 50px;
     line-height: 50px;
     color: #000000;
@@ -644,7 +642,7 @@ input.button[type="radio"] {
 .like-button {
     display: block;
     padding: 10px 6px;
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
     color: #000000;
@@ -681,7 +679,7 @@ input.button[type="radio"] {
 }
 
 .subscribe-button {
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     align-items: center;
     text-align: center;
@@ -789,7 +787,7 @@ footer {
 }
 
 .footer-navigation-link {
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -859,7 +857,7 @@ footer {
 
 .main-catalog,
 .main-catalog a {
-    font-family: "Rubik";
+    font-family: "Rubik", "Arial", sans-serif;
     font-size: 16px;
     line-height: 19px;
     color: #000000;
@@ -868,7 +866,7 @@ footer {
 
 .catalog-title {
     margin-bottom: 16px;
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     font-size: 50px;
     line-height: 50px;
 }
@@ -924,7 +922,7 @@ footer {
 .catalog-filter-title {
     margin-top: 25px;
     padding-bottom: 60px;
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     border-bottom: 2px solid #000000;
@@ -933,7 +931,7 @@ footer {
 .catalog-filter-group-title {
     padding-top: 12px;
     margin-bottom: 20px;
-    font-family: "Rubik Bold";
+    font-family: "Rubik Bold", "Arial bold", sans-serif;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: -0.02em;
@@ -980,7 +978,7 @@ footer {
     margin-top: 25.5px;
     margin-bottom: 25.5px;
     margin-right: 197px;
-    font-family: "Raleway Extrabold";
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     letter-spacing: 0.2em;
     text-transform: uppercase;
 }
@@ -1032,7 +1030,7 @@ footer {
 }
 
 .product-card-title {
-    font-family: "Rubik Bold";
+    font-family: "Rubik Bold", "Arial bold", sans-serif;
     font-size: 18px;
     line-height: 20px;
     letter-spacing: -0.02em;
@@ -1089,7 +1087,7 @@ footer {
 
 .pagination-back,
 .pagination-next {
-    font-family: "Raleway Extrabold", sans-serif;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
     font-size: 18px;
     line-height: 21px;
     letter-spacing: 0.2em;
