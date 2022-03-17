@@ -1,4 +1,4 @@
-/*version 16/03/2022_2*/
+/*version 17/03/2022*/
 
 
 /*like normalize and reset*/
@@ -1024,6 +1024,7 @@ footer {
 }
 
 .product-card-img {
+    max-width: 100%;
     margin-bottom: 32px;
 }
 
