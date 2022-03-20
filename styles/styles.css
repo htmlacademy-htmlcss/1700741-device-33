@@ -1,4 +1,4 @@
-/*version 17/03/2022_2*/
+/*version 20/03/2022_2*/
 
 
 /*like normalize and reset*/
@@ -88,7 +88,7 @@ ul {
     font-family: "Raleway Extrabold";
     font-style: normal;
     font-weight: 800;
-    src: url("/fonts/raleway-800.woff2") format("woff2");
+    src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -96,7 +96,7 @@ ul {
     font-family: "Rubik";
     font-style: normal;
     font-weight: 400;
-    src: url("/fonts/rubik-400.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -104,7 +104,7 @@ ul {
     font-family: "Rubik Bold";
     font-style: normal;
     font-weight: 700;
-    src: url("/fonts/rubik-700.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -112,7 +112,7 @@ ul {
     font-family: "Rubik Extrabold";
     font-style: normal;
     font-weight: 800;
-    src: url("/fonts/rubik-800.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -159,7 +159,7 @@ body {
 .header-catalog-wrapper {
     width: 1160px;
     margin: 40px auto 0;
-    padding: 0 60px 152px;
+    padding: 0 60px 136px;
     background-color: #FFE17F;
 }
 
@@ -310,6 +310,134 @@ button.catalog {
 /* slider */
 
 .product-slider {
+    display: grid;
+    grid-template-columns: 30px 20px 490px 20px 40px 560px;
+    grid-template-rows: 121px 43px 53px 60px auto 40px 59px auto;
+    ;
+    width: 1160px;
+    margin-top: -152px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+
+.product-slider-img {
+    grid-row: 1/-1;
+    grid-column: 1/5;
+    align-self: start;
+    justify-self: start;
+}
+
+.product-slider-number {
+    display: block;
+    width: 250px;
+    grid-row: 1/3;
+    grid-column: 6/7;
+    margin-right: 49px;
+    padding: 15px;
+    align-self: end;
+    justify-self: end;
+    font-size: 180px;
+    font-weight: bold;
+    line-height: 0;
+    color: #FFFFFF;
+    outline: 2px solid red;
+}
+
+.wrapper-slider-description {
+    grid-row: 2/6;
+    grid-column: 6/7;
+}
+
+.product-slider-advantage {
+    margin-bottom: 29px;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000000;
+}
+
+.product-slider-desc {
+    margin-bottom: 51px;
+}
+
+.product-slider-link {
+    display: block;
+    width: 220px;
+    height: 20px;
+    grid-row: 6/7;
+    grid-column: 6/7;
+    justify-self: start;
+    align-self: center;
+    width: 220px;
+    margin-bottom: 49px;
+    font-family: "Raleway Extrabold", "Arial", sans-serif;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    /*background-color: #FFE17F;*/
+    outline: 2px solid red;
+}
+
+.product-slider-specifications {
+    display: flex;
+    grid-row: 8/9;
+    grid-column: 6/7;
+    justify-self: start;
+    align-self: end;
+    margin-bottom: 38px;
+}
+
+.wrapper-value {
+    width: 140px;
+    margin-left: 7px;
+}
+
+.wrapper-value:last-child {
+    margin-left: 0;
+}
+
+.product-slider-value {
+    margin-bottom: 12px;
+    font-size: 36px;
+    color: #000000;
+}
+
+.product-slider-characteristic {
+    width: 140px;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.slider-prev {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    width: 20px;
+    height: 60px;
+    z-index: 1;
+}
+
+.slider-next {
+    grid-row: 4/5;
+    grid-column: 4/5;
+    width: 20px;
+    height: 60px;
+    z-index: 1;
+}
+
+.slider-radio {
+    grid-row: 6/7;
+    grid-column: 6/7;
+    justify-self: end;
+    align-self: center;
+}
+
+
+/*
+.product-slider {
     width: 1160px;
     margin-top: -170px;
     margin-bottom: 70px;
@@ -355,7 +483,6 @@ button.catalog {
     width: 560px;
     margin-right: 40px;
     margin-top: -30px;
-    outline: 2px solid red;
 }
 
 .wrapper-slider {
@@ -433,6 +560,7 @@ button.catalog {
 .checked-slider {
     display: block;
 }
+*/
 
 
 /* submenu */
@@ -474,9 +602,6 @@ button.catalog {
     padding-top: 0.1px;
 }
 
-
-/*НЕ РАБОТАЕТ СДВИГ ВВЕРХ*/
-
 .wrapper-purshase-terms {
     display: flex;
     width: 1160px;
@@ -514,6 +639,7 @@ input.button[type="radio"] {
     letter-spacing: 20%;
     color: #000000;
     background-color: #FFE17F;
+    outline: 1px solid red;
 }
 
 .purshase-terms-form input:checked+label {
@@ -630,9 +756,6 @@ input.button[type="radio"] {
     font-weight: bold;
     line-height: 20px;
     letter-spacing: -0.02em;
-    /*list-style-type: none;
-    list-style-image: url('../images/Ellipse.svg');
-    list-style-position: inside;*/
 }
 
 .contacts-subtitle {
@@ -647,7 +770,6 @@ input.button[type="radio"] {
 }
 
 .transport-item {
-    position: relative;
     padding-left: 34px;
     background: url('../images/Ellipse.svg') left center no-repeat;
     background-size: 8px 8px;
@@ -661,7 +783,8 @@ input.button[type="radio"] {
 
 .like-button {
     display: block;
-    padding: 10px 6px;
+    position: relative;
+    padding: 6px;
     font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
@@ -669,9 +792,34 @@ input.button[type="radio"] {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-decoration: none;
-    background-color: #FFE17F;
-    /* не знаю, как сестить фон*/
+    /*background: linear-gradient(to bottom, lime 30%, red 25% 50%, cyan 50% 75%, yellow 75%);*/
+    background: linear-gradient(to bottom, #FFFFFF 12px, #FFE17F 12px 20px, #FFFFFF 20px);
 }
+
+
+/*
+.like-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    margin: -6px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+
+.like-button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    margin: -6px;
+    background-color: #FFFFFF;
+    z-index: 1;
+}
+*/
 
 .about-link {
     width: 270px;
@@ -1078,7 +1226,7 @@ footer {
     width: 760px;
     height: 55px;
     margin: 0 40px 44px 40px;
-    font-family: "Relaway Extrabold";
+    font-family: "Relaway Extrabold", "Arial", sans-serif;
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
