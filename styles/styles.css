@@ -368,9 +368,8 @@ button.catalog:disabled .catalog-plus {
     justify-self: end;
     font-size: 180px;
     font-weight: bold;
-    line-height: 0;
+    line-height: 120px;
     color: #FFFFFF;
-    outline: 2px solid red;
 }
 
 .wrapper-slider-description {
@@ -393,13 +392,11 @@ button.catalog:disabled .catalog-plus {
 .product-slider-link {
     display: block;
     width: 220px;
-    height: 20px;
     grid-row: 6/7;
     grid-column: 6/7;
     justify-self: start;
     align-self: center;
     width: 220px;
-    margin-bottom: 49px;
     font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
@@ -407,7 +404,6 @@ button.catalog:disabled .catalog-plus {
     color: #000000;
     text-transform: uppercase;
     text-decoration: none;
-    outline: 2px solid red;
 }
 
 .product-slider-specifications {
@@ -620,6 +616,14 @@ button.catalog:disabled .catalog-plus {
     background-color: #FFE17F;
 }
 
+.catalog-list-link:hover .product-navigation-block {
+    background-color: #FFC700;
+}
+
+.product-navigation-block:active {
+    opacity: 0.7;
+}
+
 
 /* purshase-terms */
 
@@ -632,6 +636,8 @@ button.catalog:disabled .catalog-plus {
 
 .wrapper-purshase-terms {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 1160px;
     margin: auto;
     margin-top: -102px;
@@ -652,32 +658,42 @@ input.button[type="radio"] {
 }
 
 
-/* НЕ СРАБАТЫВАЕТ вертикальное выравнивание*/
+/* НЕ СРАБАТЫВАЕТ вертикальное выравнивание*
+justify-content: enter align-items: center; alogn-self: center также не сработали*/
 
 .purshase-terms-form label {
     display: block;
     height: 40px;
     margin-bottom: 35px;
-    padding-top: 10px;
-    /*vertical-align: middle;
-    padding: auto;*/
+    align-self: center;
     font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
     letter-spacing: 20%;
     color: #000000;
-    background-color: #FFE17F;
+}
+
+.purshase-terms-button {
+    width: 152px;
+    margin: auto;
+    background: linear-gradient(to bottom, transparent 12px, #FFE17F 12px 20px, transparent 20px);
+    border: none;
+    padding: 6px;
     outline: 1px solid red;
 }
 
 .purshase-terms-form input:checked+label {
     display: block;
-    background-color: #000000;
+    background: #000000;
     font-family: "Raleway Extrabold", "Arial", sans-serif;
     line-height: 21px;
     text-align: center;
     letter-spacing: 20%;
     color: #FFE17F;
+}
+
+.purshase-terms-form input:checked+label .purshase-terms-button {
+    background: none;
 }
 
 .wrapper-term {
@@ -726,10 +742,30 @@ input.button[type="radio"] {
     background-color: #F0F0F0;
 }
 
-.delivery-order-img {
+.delivery-order-img-block {
     width: 125px;
     height: 100px;
     background-color: #FFE17F;
+}
+
+
+/*НЕ ВЫРАВНИВАЕТСЯ МАШИНКА ПО ВЕРТИКАЛИ*/
+
+.delivery-order-img {
+    width: 42px;
+}
+
+.delivery-order:hover .delivery-order-img-block {
+    background-color: #FFC700;
+}
+
+.delivery-order:active .delivery-order-img-block {
+    opacity: 0.7;
+}
+
+.delivery-order:focus {
+    box-sizing: content-box;
+    border: 1px solid #AF4FFF;
 }
 
 .delivery-content {
@@ -999,6 +1035,21 @@ footer {
     text-decoration: none;
 }
 
+.footer-navigation-link:hover {
+    color: #ffc500;
+    border-bottom: 3px solid #ffc500;
+}
+
+.footer-navigation-link:active {
+    opacity: 0.3;
+}
+
+.footer-navigation-link:focus {
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid #AF4FFF;
+}
+
 .footer-social-list {
     display: flex;
     flex-wrap: wrap;
@@ -1011,6 +1062,19 @@ footer {
     background-color: rgba(255, 255, 255, 0.3);
     margin-right: 15px;
     margin-bottom: 5px;
+}
+
+.footer-social-item:hover {
+    background-color: rgba(255, 199, 0, 1);
+}
+
+.footer-social-item:active img {
+    opacity: 0.3;
+}
+
+.footer-social-item:focus {
+    border: 1px solid #AF4FFF;
+    border-radius: 0;
 }
 
 .footer-social-link {
@@ -1035,6 +1099,21 @@ footer {
     color: #F0F0F0;
 }
 
+.footer-tel:hover {
+    color: #FFC700;
+}
+
+.footer-tel:active {
+    opacity: 0.3;
+}
+
+.footer-tel:focus {
+    box-sizing: content-box;
+    color: #FFFFFF;
+    opacity: 1;
+    border: 1px solid #AF4FFF;
+}
+
 .footer-link-htmlacademy {
     display: block;
     margin-left: 59px;
@@ -1043,6 +1122,22 @@ footer {
 .footer-address-img {
     width: 115px;
     margin-left: auto;
+    fill: #FFC700;
+}
+
+.footer-address-img:hover {
+    box-sizing: content-box;
+    fill: #FFFFFF;
+}
+
+.footer-address-img:active {
+    opacity: 0.3;
+}
+
+.footer-address-img:focus {
+    opacity: 1;
+    background-color: red;
+    border: 1px solid #AF4FFF;
 }
 
 
@@ -1267,10 +1362,14 @@ footer {
     color: #444444;
 }
 
+
+/* НЕ СРАБАТЫВАЕТ margin: 0 auto;*/
+
 .loading {
     width: 760px;
     height: 55px;
-    margin: 0 40px 44px 40px;
+    margin: 0 auto;
+    margin-bottom: 44px;
     font-family: "Relaway Extrabold", "Arial bold", sans-serif;
     text-align: center;
     letter-spacing: 0.2em;
